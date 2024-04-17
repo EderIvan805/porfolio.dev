@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Agosto 2023 - Diciembre 2023",
+    title: "Front End Developer",
+    company: "Hightek Desarrollo y Consultoría",
+    description:
+      "Participé activamente en el diseño de la arquitectura del sistema de Timbrado CFDI v4.0 y en el desarrollo de una interfaz responsiva para esta versión, trabajando en equipo para lograrlo. Además, contribuí a la implementación del consumo de Servicios de Generación de CFDIs, Sellado y Certificado, así como al Timbrado de Facturas.",
+  },
+  {
+    date: "Febrero 2023 - Julio 2023",
+    title: "Full Stack Developer",
+    company: "Instituto de Salud Pública (UV)",
+    description:
+      "Me he encargado del mantenimiento de la Base de Datos mediante procedimientos almacenados, además de construir el BackEnd y FrontEnd con integración de PowerBi, asegurando así un funcionamiento óptimo y una visualización efectiva de los datos.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

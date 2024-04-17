@@ -1,0 +1,48 @@
+---
+const EDUCATION = [
+  {
+    date: "Agosto 2019 - Diciembre 2023",
+    title: "Carrera en Lic. en Ingeniería de Software",
+    company: "Universidad Veracruzana",
+    image: "/education/uv.webp",
+  },
+  {
+    date: "Febrero 2024 - Actualidad",
+    title: "Bootcamp Front End Developer",
+    company: "Oracle Next Education",
+    image: "/education/oracle.webp",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    EDUCATION.map(({ date, title, company, image }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt={`Imágen del logo del Instituto ${image}`}
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-yellow-400">
+            {title}
+          </h3>
+          <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
+            {company}
+          </h4>
+          <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+            {date}
+          </time>
+          <div class="flex flex-wrap mt-2"></div>
+        </div>
+      </article>
+    ))
+  }
+</div>

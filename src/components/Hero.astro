@@ -1,0 +1,52 @@
+---
+const personalImageAlt = "Miguel Ángel";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import GithHubIcon from "@/components/icons/GitHub.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16"
+      src="https://avatars.githubusercontent.com/u/85649939?s=400&u=c1909ee673a255866fa881f66bd9e5e577b9aa66&v=4"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/eder-negrete-garcía-b540b0299/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hola! Soy Eder
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    +1 año de experiencia. <strong
+      >Ingeniero de Software </strong
+    > de Xalapa, Veracruz, México. Especializado en crear software mantenible.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:negretegarciaeib.cbtis13@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/eder-negrete-garcía-b540b0299/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/EderIvan805">
+      <GithHubIcon class="size-4" />
+      Github
+    </SocialPill>
+  </nav>
+</div>
